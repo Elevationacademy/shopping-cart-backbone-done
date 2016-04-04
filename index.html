@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="http://underscorejs.org/underscore-min.js"></script>
+  <script src="http://backbonejs.org/backbone-min.js"></script>
+  <title>Shopping Cart!</title>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">SHOPPING CART</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="view-cart" data-toggle="dropdown" role="button">Shopping Cart <i class="fa fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="page-header">
+    <h1>SHOPPING CART</h1>
+  </div>
+
+  <div class="container">
+    <div class="shopping-cart">
+      <p class="cart-title">Items in Cart</p>
+      <div class="cart-list"></div>
+      <p>Total: $<span class="total">0</span></p>
+      <button class="btn clear-cart">Clear Cart</button>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card item" data-name="glass" data-price="68">
+            <div class="pricebox">
+              <p class="price"> $68 </p>
+            </div>
+            <div class="buybox">
+              <p class="add-to-cart"> ADD TO CART </p>
+            </div>
+            <div class="card-inner">
+              <img src="http://ecx.images-amazon.com/images/I/31AOX24ATKL.jpg" class="proimage">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card item" data-name="pencils" data-price="3">
+            <div class="pricebox">
+              <p class="price"> $3 </p>
+            </div>
+            <div class="buybox">
+              <p class="add-to-cart"> ADD TO CART </p>
+            </div>
+            <div class="card-inner">
+              <img src="http://ecx.images-amazon.com/images/I/51YFEe%2BCYbL.jpg" class="proimage">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card item" data-name="kinfolk" data-price="21">
+            <div class="pricebox">
+              <p class="price"> $21 </p>
+            </div>
+            <div class="buybox">
+              <p class="add-to-cart"> ADD TO CART </p>
+            </div>
+            <div class="card-inner">
+              <img src="http://ecx.images-amazon.com/images/I/41m0VhULItL.jpg" class="proimage">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card item" data-name="book" data-price="25">
+            <div class="pricebox">
+              <p class="price"> $25 </p>
+            </div>
+            <div class="buybox">
+              <p class="add-to-cart"> ADD TO CART </p>
+            </div>
+            <div class="card-inner">
+              <img src="http://ecx.images-amazon.com/images/I/41uyfSEwr0L.jpg" class="proimage">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card item" item data-name="pipe" data-price="124">
+            <div class="pricebox">
+              <p class="price"> $124 </p>
+            </div>
+            <div class="buybox">
+              <p class="add-to-cart"> ADD TO CART </p>
+            </div>
+            <div class="card-inner">
+              <img src="http://ecx.images-amazon.com/images/I/41TvbxcZpZL.jpg" class="proimage">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card-container">
+          <div class="card item" data-name="stool" data-price="92">
+            <div class="pricebox">
+              <p class="price"> $92 </p>
+            </div>
+            <div class="buybox">
+              <p class="add-to-cart"> ADD TO CART </p>
+            </div>
+            <div class="card-inner">
+              <img src="http://ecx.images-amazon.com/images/I/41NZO5GovmL.jpg" class="proimage">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script id="item-template" type="text/x-handlebars-template">
+    <span>{{name}} - ${{price}}</span>
+  </script>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
