@@ -76,7 +76,7 @@ var AppView = Backbone.View.extend({
   },
 
   clearCart: function () {
-    // loop through all the view and call remove on them
+    // loop through all the views and call remove on them
     for (var i = 0; i < this.itemViews.length; i += 1) {
       this.itemViews[i].remove();
     }
